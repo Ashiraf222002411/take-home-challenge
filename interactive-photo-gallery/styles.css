@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+.gallery {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    flex: 1 1 25%;
+    overflow: hidden;
+    
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    right: 5px;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.gallery-item .text {
+    color: white;
+    font-size: 16px;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    
+}
+
+.gallery-item .text a {
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    color: skyblue;
+    margin-top: 10px;
+}
+
+.gallery-item:hover img {
+    filter: blur(5px) grayscale(100%);
+    transform: scale(1.05);
+}   
+
+.gallery-item:hover .overlay {
+    
+    transform: translateY(-10px);
+}
+
+.gallery-item:hover .text {
+    transform: translateY(-10px); 
+}
+
+.gallery-item:hover .text a {
+    opacity: 1;
+    transform: translateY(-5px);
+}
+
+.gallery-item .text h2, .gallery-item .text p {
+    margin: 0;
+}
+
+.gallery-item .text h2 {
+    margin-bottom: 10px; 
+}
