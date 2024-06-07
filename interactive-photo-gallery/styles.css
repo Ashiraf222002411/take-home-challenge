@@ -1,29 +1,32 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
 
 .gallery {
     display: flex;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 106px;
+    margin-right: 106px;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    gap: 2px;
 }
 
 .gallery-item {
     position: relative;
-    flex: 1 1 25%;
+    flex: 1 1 calc(25% - 2px);
     overflow: hidden;
+    margin: 0;
     
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    right: 5px;
     transition: filter 0.3s, transform 0.3s;
 }
 
@@ -40,22 +43,27 @@ body {
     align-items: flex-start;
     padding: 20px;
     box-sizing: border-box;
-    transition: transform 0.3s;
+    transition: transform (100%);
 }
 
 .gallery-item .text {
     color: white;
-    font-size: 16px;
+    font-size: 22px;
     transform: translateY(0);
     transition: transform 0.3s;
-    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-weight: 50px; 
+    margin-left: 25px;
 }
 
 .gallery-item .text a {
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
-    color: skyblue;
+    color:hsl(194, 100%, 50%);;
     margin-top: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .gallery-item:hover img {
@@ -65,7 +73,7 @@ body {
 
 .gallery-item:hover .overlay {
     
-    transform: translateY(-10px);
+    transform: translateY(0);
 }
 
 .gallery-item:hover .text {
@@ -75,6 +83,8 @@ body {
 .gallery-item:hover .text a {
     opacity: 1;
     transform: translateY(-5px);
+    text-decoration: none;
+    font-size: 16px;
 }
 
 .gallery-item .text h2, .gallery-item .text p {
@@ -83,4 +93,13 @@ body {
 
 .gallery-item .text h2 {
     margin-bottom: 10px; 
+    display: block;
+    white-space: pre-wrap;
+}
+
+.gallery-item .text p {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px; 
+    font-weight: normal;
 }
