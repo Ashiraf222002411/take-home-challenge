@@ -67,7 +67,7 @@ body {
 }
 
 .gallery-item:hover img {
-    filter: blur(5px) grayscale(100%);
+    filter: blur(10px) grayscale(100%);
     transform: scale(1.05);
 }   
 
@@ -102,4 +102,35 @@ body {
     margin-bottom: 10px;
     font-size: 16px; 
     font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100vh; 
+        margin: 10px 50px;
+        margin-bottom: 3px;
+        
+    }
+
+    .gallery-item {
+        flex: 0 0 25%;
+        height: 100vh;
+        margin: 0;
+        
+    }
+
+    .gallery-item img {
+        height: 600px;
+        width: 97px; 
+        object-fit: cover; 
+       
+    }
+
+    
+    .gallery-item .overlay, .gallery-item .text, .gallery-item .text a {
+        display: none; 
+    }
 }
