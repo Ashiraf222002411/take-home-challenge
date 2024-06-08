@@ -1,19 +1,19 @@
+/* Reset body margin and set basic styles */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
 
+/* Main gallery container */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 106px;
-    margin-right: 106px;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    margin: 36px 106px;
     gap: 2px;
 }
 
+/* Gallery item styles */
 .gallery-item {
     position: relative;
     flex: 1 1 calc(25% - 2px);
@@ -22,6 +22,7 @@ body {
     
 }
 
+/* Image styles */
 .gallery-item img {
     width: 100%;
     height: 100%;
@@ -30,6 +31,7 @@ body {
     transition: filter 0.3s, transform 0.3s;
 }
 
+/* Overlay effect */
 .gallery-item .overlay {
     position: absolute;
     top: 0;
@@ -46,6 +48,7 @@ body {
     transition: transform (100%);
 }
 
+/* Text styles inside overlay */
 .gallery-item .text {
     color: #ffffff;
     font-size: 90%;
@@ -56,6 +59,7 @@ body {
     margin-left: 25px;
 }
 
+/* 'Know more' link styles */
 .gallery-item .text a {
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
@@ -66,6 +70,7 @@ body {
     font-weight: normal;
 }
 
+/* Hover effects */
 .gallery-item:hover img {
     filter: blur(10px) grayscale(100%);
     transform: scale(1.05);
@@ -87,6 +92,7 @@ body {
     font-size: 15px;
 }
 
+/* Text spacing */
 .gallery-item .text h2, .gallery-item .text p {
     margin: 0;
 }
