@@ -7,8 +7,8 @@ This project is an interactive photo gallery that displays animal images with ov
 1. Responsive Design: The interactive photo gallery adapts seamlessly to different screen sizes and devices.
 2. Figma Design Accuracy: Matches the provided Figma designs pixel-perfectly, including layout, spacing, typography, and visual styles.
 3. Hover Interaction: Implements the hover interaction as shown in the Figma prototype, displaying additional details when a user hovers over a photo.
-4. Cross-browser Compatibility**: Ensures consistent performance across modern web browsers, such as Chrome, Firefox, Safari, and Edge.
-5. Code Quality**: Clean, readable, and well-structured code, following best practices and coding conventions for HTML, CSS, and JavaScript.
+4. Cross-browser Compatibility: Ensures consistent performance across modern web browsers, such as Chrome, Firefox, Safari, and Edge.
+5. Code Quality: Clean, readable, and well-structured code, following best practices and coding conventions for HTML, CSS, and JavaScript.
 
  Installation
 
