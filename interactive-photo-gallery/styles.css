@@ -47,8 +47,8 @@ body {
 }
 
 .gallery-item .text {
-    color: white;
-    font-size: 22px;
+    color: #ffffff;
+    font-size: 90%;
     transform: translateY(0);
     transition: transform 0.3s;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
@@ -59,10 +59,10 @@ body {
 .gallery-item .text a {
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
-    color:hsl(194, 100%, 50%);;
+    color:hsl(189, 100%, 50%);;
     margin-top: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: normal;
 }
 
@@ -84,7 +84,7 @@ body {
     opacity: 1;
     transform: translateY(-5px);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .gallery-item .text h2, .gallery-item .text p {
@@ -123,8 +123,8 @@ body {
     }
 
     .gallery-item img {
-        height: 600px;
-        width: 97px; 
+        height: 96%;
+        width: 100%; 
         object-fit: cover; 
        
     }
@@ -134,3 +134,27 @@ body {
         display: none; 
     }
 }
+
+/* Added vendor prefixes for compatibility */
+.gallery-item img {
+    transition: filter 0.3s, transform 0.3s;
+    -webkit-transition: filter 0.3s, -webkit-transform 0.3s; /* Safari and older Chrome */
+    -moz-transition: filter 0.3s, -moz-transform 0.3s; /* Firefox */
+    -o-transition: filter 0.3s, -o-transform 0.3s; /* Opera */
+    -ms-transition: filter 0.3s, -ms-transform 0.3s; /* IE */
+}
+
+.gallery-item:hover img {
+    filter: blur(10px) grayscale(100%);
+    -webkit-filter: blur(10px) grayscale(100%);
+    -moz-filter: blur(10px) grayscale(100%);
+    -o-filter: blur(10px) grayscale(100%);
+    -ms-filter: blur(10px) grayscale(100%);
+    
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
