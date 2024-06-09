@@ -51,11 +51,10 @@ body {
 /* Text styles inside overlay */
 .gallery-item .text {
     color: #ffffff;
-    font-size: 90%;
+    font-size: 100%;
     transform: translateY(0);
     transition: transform 0.3s;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-weight: 50px; 
+    font-family: Helvetica, Arial;
     margin-left: 25px;
 }
 
